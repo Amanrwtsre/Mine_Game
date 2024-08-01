@@ -1,0 +1,122 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animation for Background Gradient */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Heading Style */
+h1 {
+  margin-top: 20px;
+  color: #333;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Board Style */
+#game-board {
+  display: inline-block;
+  margin: 20px auto;
+  border: 2px solid #333;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tile Rows */
+.board-row {
+  display: flex;
+}
+
+/* Tile Style */
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Tile Hover Effect */
+.tile:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+/* Revealed Tile Style */
+.revealed {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Mine Tile Style */
+.mine {
+  background-color: #ff3333;
+  color: #fff;
+}
+
+/* Game Over Options Style */
+#game-over-options {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+}
+
+#game-over-options button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#game-over-options button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Result Section Style */
+#result {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Win Message Style */
+#win-message {
+  display: none;
+  font-size: 24px;
+  color: #00a000;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: winAnimation 1.5s ease-in-out infinite;
+}
+
+/* Animation for Win Message */
+@keyframes winAnimation {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
